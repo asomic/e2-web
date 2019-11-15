@@ -1,0 +1,844 @@
+@import 'reset'
+
+// Typography
+@mixin font-light
+    font-weight: 300
+@mixin font-regular
+    font-weight: 400
+@mixin font-bold
+    font-weight: 700
+@mixin font-black
+    font-weight: 900
+
+// Color
+$blue: #0B228C
+$blue-dark: #0A1A66
+$yellow: #FDCB00
+$arsenic: #3B3F4E
+$anti-flash-white: #EBEDF2
+$white-smoke: #F3F4F7
+$gainsboro: #DFDFDF
+$gunmetal: #2C2C3D
+
+.color-blue
+    color: $blue
+.color-blue-dark
+    color: $blue-dark
+.color-yellow
+    color: $yellow
+.color-arsenic
+    color: $arsenic
+.color-anti-flash-white
+    color: $anti-flash-white
+.color-white-smoke
+    color: $white-smoke
+.color-gainsboro
+    color: $gainsboro
+
+// Basics
+body
+    font-family: 'Roboto', sans-serif
+    box-sizing: border-box
+
+.pd-lr
+    padding-left: 33px
+    padding-right: 33px
+
+@media (min-width: 768px)
+    .pd-lr
+        padding-left: 50px
+        padding-right: 50px
+
+@media (min-width: 900px)
+    .pd-lr
+        padding-left: 68px
+        padding-right: 68px
+
+@media (min-width: 1200px)
+    .pd-lr
+        padding-left: 110px
+        padding-right: 110px
+
+@media (min-width: 1400px)
+    .pd-lr
+        padding-left: 120px
+        padding-right: 120px
+
+@media (min-width: 1600px)
+    .pd-lr
+        padding-left: 0
+        padding-right: 0
+        margin-left: auto
+        margin-right: auto
+        max-width: 1300px
+
+// Header
+header.site-header
+    width: 100%
+    position: absolute
+    top: 0
+    z-index: 998
+    .header-inner
+        width: 100%
+        box-sizing: border-box
+        padding-top: 50px
+        display: flex
+        align-content: center
+        align-items: center
+        justify-content: space-between
+        a
+            img
+        .hamburger
+            outline: none
+            padding: 0
+            .hamburger-box
+                .hamburger-inner
+                    background-color: white
+                    border-radius: 0
+                    &:before, &:after
+                        background-color: white
+                        border-radius: 0
+        nav.the-menu-desktop
+            display: none
+            ul
+                margin: 0
+                padding: 0
+                display: flex
+                justify-content: flex-start
+                flex-wrap: wrap
+                flex-direction: row
+                a
+                    color: white
+                    text-decoration: none
+                    line-height: 150%
+                    font-size: 18px
+                    @include font-black
+                    margin-bottom: 18px
+        nav.the-menu-mobile
+            position: fixed
+            z-index: -10
+            left: -100vw
+            right: 0
+            top: 0
+            bottom: 0
+            overflow: hidden
+            width: 100vw
+            height: 100vh
+            box-sizing: border-box
+            background: $arsenic
+            padding: 140px 33px
+            transition: all ease 0.4s
+            ul
+                margin: 0
+                padding: 0
+                display: flex
+                justify-content: flex-start
+                flex-wrap: wrap
+                flex-direction: column
+                // margin-bottom: 200px
+                a
+                    color: white
+                    text-decoration: none
+                    line-height: 150%
+                    font-size: 18px
+                    @include font-black
+                    margin-bottom: 20px
+            .contact
+                position: absolute
+                bottom: 50px
+                h6
+                    color: white
+                    margin: 0
+                    @include font-black
+                    font-size: 19px
+                    line-height: 22px
+                    margin-bottom: 14px
+                a
+                    color: $yellow
+                    font-size: 18px
+                    line-height: 150%
+                    @include font-bold
+        .slide
+            left: 0 !important
+    .fixed
+        position: fixed !important
+
+@media (min-width: 1200px)
+    header.site-header
+        .header-inner
+            padding-top: 60px
+            a
+                img
+            .hamburger
+                display: none
+                .hamburger-box
+                    .hamburger-inner
+                        &:before, &:after
+            nav.the-menu-desktop
+                display: inherit
+                ul
+                    a
+                        margin-left: 74px
+                        margin-bottom: 0
+                        font-size: 16px
+            nav.the-menu-mobile
+                display: none
+                // padding: 140px 50px
+                ul
+                    a
+                .contact
+                    h6
+                    a
+            .slide
+        .fixed
+
+@media (min-width: 768px)
+    header.site-header
+        .header-inner
+            // padding-top: 60px
+            a
+                img
+            .hamburger
+                // display: none
+                .hamburger-box
+                    .hamburger-inner
+                        &:before, &:after
+            nav.the-menu-desktop
+                // display: inherit
+                ul
+                    a
+                        // margin-left: 74px
+                        // margin-bottom: 0
+                        // font-size: 16px
+            nav.the-menu-mobile
+                // display: none
+                padding: 150px 50px
+                ul
+                    a
+                .contact
+                    h6
+                    a
+            .slide
+        .fixed
+
+@media (min-width: 900px)
+    header.site-header
+        .header-inner
+            // padding-top: 60px
+            a
+                img
+            .hamburger
+                // display: none
+                .hamburger-box
+                    .hamburger-inner
+                        &:before, &:after
+            nav.the-menu-desktop
+                // display: inherit
+                ul
+                    a
+                        // margin-left: 74px
+                        // margin-bottom: 0
+                        // font-size: 16px
+            nav.the-menu-mobile
+                // display: none
+                padding: 150px 68px
+                ul
+                    a
+                .contact
+                    h6
+                    a
+            .slide
+        .fixed
+
+// Hero
+.hero
+    background-position: center
+    background-size: cover
+    padding-top: 180px
+    padding-bottom: 54px
+    position: relative
+    background: linear-gradient(0deg, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/back-hero.jpg) center, #3A3A41;
+    background-size: cover
+    .hero-inner
+        h1
+            margin: 0
+            font-size: 38px
+            line-height: 115%
+            color: white
+            margin-bottom: 86px
+            @include font-black
+        .hero-footer
+            h6
+                margin: 0
+                font-size: 16px
+                line-height: 140%
+                color: white
+                @include font-black
+                &:first-child
+                    color: $yellow
+
+@media (min-width: 768px)
+    .hero
+        padding-top: 190px
+        padding-bottom: 56px
+        .hero-inner
+            h1
+                width: 80%
+                margin-bottom: 90px
+            .hero-footer
+                display: flex
+                width: 100%
+                justify-content: space-between
+                h6
+                    &:first-child
+
+@media (min-width: 1200px)
+    .hero
+        padding-top: 210px
+        padding-bottom: 64px
+        background: linear-gradient(0deg, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/back-hero.jpg) center, #3A3A41;
+        background-size: cover
+        .hero-inner
+            h1
+                width: 55%
+                font-size: 40px
+                margin-bottom: 100px
+                line-height: 120%
+            .hero-footer
+                h6
+                    &:first-child
+
+@media (min-width: 1400px)
+    .hero
+        .hero-inner
+            h1
+            .hero-footer
+                h6
+                    &:first-child
+
+@media (min-width: 1600px)
+    .hero
+        padding-top: 220px
+        // padding-bottom: 64px
+        .hero-inner
+            h1
+                width: 50%
+                margin-bottom: 120px
+            .hero-footer
+                h6
+                    &:first-child
+
+// Servicios
+.servicios
+    background: $white-smoke
+    .servicios-inner
+        padding-top: 52px  
+        padding-bottom: 52px  
+        h2
+            margin: 0
+            color: $blue
+            font-size: 28px
+            margin-bottom: 32px
+            @include font-black
+        .servicios-items
+            .item
+                margin-bottom: 46px
+                &:last-child
+                    margin-bottom: 22px
+                .img
+                    width: 100%
+                    height: 340px
+                    margin-bottom: 22px
+                    background-color: $arsenic
+                    background-position: center
+                    background-size: cover
+                h3
+                    margin: 0
+                    margin-bottom: 14px
+                    font-size: 23px
+                    line-height: 26px
+                    color: $blue
+                    @include font-bold
+                p
+                    margin: 0
+                    font-size: 16px
+                    line-height: 140%
+                    @include font-light
+                    margin-bottom: 18px
+                a.button-item
+                    background: $blue-dark
+                    padding: 10.5px 22px
+                    text-decoration: none
+                    color: white 
+                    font-size: 14px
+                    border-radius: 2px
+                    line-height: 290%
+                    @include font-bold
+
+@media (min-width: 768px)
+    .servicios
+        .servicios-inner
+            h2
+            .servicios-items
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-gap: 20px
+                .item
+                    box-sizing: border-box
+                    &:nth-child(n+2)
+                        margin-bottom: 22px
+                    .img
+                        height: 380px
+                    h3
+                    p
+                    a.button-item
+
+@media (min-width: 900px)
+    .servicios
+        .servicios-inner
+            h2
+            .servicios-items
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr 1fr
+                grid-gap: 16px
+                .item
+                    box-sizing: border-box
+                    &:nth-child(n+2)
+                        margin-bottom: 22px
+                    .img
+                        height: 300px
+                    h3
+                    p
+                    a.button-item
+
+@media (min-width: 1400px)
+    .servicios
+        .servicios-inner
+            h2
+            .servicios-items
+                .item
+                    &:nth-child(n+2)
+                    .img
+                        height: 360px
+                    h3
+                        width: 95%
+                    p
+                    a.button-item
+
+// Modales
+.modals
+    position: fixed
+    background: rgba(black, 0.5)
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    width: 100vw
+    height: 100vh
+    justify-content: center
+    align-items: center
+    z-index: 999
+    display: flex
+    visibility: hidden
+    opacity: 0
+    transition: all ease 0.4s
+    .modal-item
+        background: white
+        width: 90%
+        height: 80%
+        overflow: hidden
+        position: relative
+        transition: all ease 0.4s
+        .img
+            width: 100%
+            height: 180px
+            background-color: $arsenic
+            background-position: center
+            background-size: cover
+        .data
+            width: 100%
+            height: 300px
+            position: static
+            padding: 36px 32px
+            box-sizing: border-box
+            overflow: scroll
+            h3
+                margin: 0
+                font-size: 26px
+                line-height: 120%
+                margin-bottom: 24px
+                @include font-black
+            p
+                margin: 0
+                font-size: 16px
+                line-height: 140%
+                margin-bottom: 12px
+        .modal-button
+            position: absolute
+            bottom: 0
+            background: $blue-dark
+            margin: 0
+            padding: 12px 20px
+            width: 100%
+            box-sizing: border-box
+            color: white
+            text-align: center
+            @include font-black
+            cursor: pointer
+
+@media (min-width: 768px)
+    .modals
+        .modal-item
+            width: 70%
+            height: 65%
+            .img
+                height: 280px
+            .data
+                height: 350px
+                h3
+                p
+            .modal-button
+
+@media (min-width: 1024px)
+    .modals
+        .modal-item
+            width: 70%
+            height: 65%
+            display: flex
+            .img
+                width: 40%
+                height: 100%
+            .data
+                width: 60%
+                height: 100%
+                padding: 48px 50px
+                h3
+                p
+            .modal-button
+                padding: 14px 0
+
+@media (min-width: 1200px)
+    .modals
+        .modal-item
+            width: 65vw
+            height: 80vh
+            .img
+            .data
+                padding: 56px 60px
+                h3
+                    font-size: 31px
+                    margin-bottom: 29px
+                p
+                    font-size: 16px
+                    margin-bottom: 19px
+            .modal-button
+
+@media (min-width: 1400px)
+    .modals
+        .modal-item
+            width: 60vw
+            height: 70vh
+
+@media (min-width: 1600px)
+    .modals
+        .modal-item
+            width: 50vw
+            height: 64vh
+
+@media (min-width: 1800px)
+    .modals
+        .modal-item
+            width: 45vw
+            height: 64vh
+            .data
+                padding: 60px 64px
+
+.add-visibility
+    visibility: visible
+    opacity: 1
+
+.serv-1,
+.serv-2,
+.serv-3,
+.serv-4
+    display: none
+
+.show-modal
+    display: block !important
+
+@media (min-width: 1024px)
+    .show-modal
+        display: flex !important
+
+// Proyectos
+.proyectos
+    background: $anti-flash-white
+    .proyectos-inner
+        padding-top: 60px
+        padding-bottom: 60px
+        h2
+            margin: 0
+            font-size: 28px
+            color: $blue
+            margin-bottom: 30px
+            @include font-black
+        .proyectos-items
+            .item
+                position: relative
+                margin-bottom: 36px
+                &:last-child
+                    margin-bottom: 18px
+                .img
+                    width: 100%
+                    height: 220px
+                    margin-bottom: 22px
+                    background-color: $arsenic
+                    background-position: center
+                    background-size: cover
+                h3
+                    margin: 0
+                    font-size: 23px
+                    color: $blue
+                    @include font-black
+                    margin-bottom: 14px
+                p
+                    margin: 0
+                    @include font-light
+                    font-size: 16px
+                    line-height: 140%
+                &:before
+                    content: ''
+                    position: absolute
+                    top: 10px
+                    right: 10px
+                    color: white
+                    width: 28px
+                    height: 28px
+                    background-color: $blue
+                    background-image: url('/assets/images/expand-icon.svg')
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-size: 60% 60%
+
+@media (min-width: 768px)
+    .proyectos
+        .proyectos-inner
+            h2
+            .proyectos-items
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-gap: 20px
+                .item
+                    &:last-child
+                    .img
+                        height: 260px
+                    h3
+                    p
+                    &:before
+
+@media (min-width: 900px)
+    .proyectos
+        .proyectos-inner
+            h2
+            .proyectos-items
+                // display: grid
+                // grid-template-columns: 1fr 1fr
+                // grid-gap: 20px
+                .item
+                    &:last-child
+                    .img
+                        height: 310px
+                    h3
+                    p
+                    &:before
+
+@media (min-width: 1200px)
+    .proyectos
+        .proyectos-inner
+            h2
+            .proyectos-items
+                // display: grid
+                // grid-template-columns: 1fr 1fr
+                // grid-gap: 20px
+                .item
+                    &:last-child
+                    .img
+                    h3
+                    p
+                    &:before
+
+// Nosotros
+.nosotros
+    background: $arsenic
+    overflow: hidden
+    .nosotros-inner
+        padding-top: 76px
+        padding-bottom: 88px
+        position: relative
+        .img
+            z-index: 1
+            position: absolute
+            top: -100px
+            left: 20px
+            right: 0
+            width: 100%
+            height: 100%
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+        .data
+            z-index: 10
+            position: relative
+            h1
+                margin: 0
+                color: white
+                font-size: 31px
+                line-height: 120%
+                margin-bottom: 20px
+                @include font-black
+            p
+                color: $gainsboro
+                font-size: 16px
+                line-height: 140%
+                margin-bottom: 35px
+            a
+                color: $yellow
+                font-size: 22px
+                line-height: 26px
+                @include font-bold
+
+@media (min-width: 768px)
+    .nosotros
+        .nosotros-inner
+            display: grid
+            grid-template-columns: 1fr 1fr
+            height: 100%
+            .img
+                position: relative
+                left: 20px
+                top: -190px
+                bottom: 0
+                right: 0
+                width: 80%
+                height: 170%
+                background-size: 100%
+            .data
+                position: static
+                h1
+                p
+                a
+
+@media (min-width: 900px)
+    .nosotros
+        .nosotros-inner
+            // display: grid
+            // grid-template-columns: 1fr 1fr
+            // height: 100%
+            padding-top: 96px
+            padding-bottom: 108px
+            .img
+                // position: relative
+                left: 60px
+                top: -380px
+                bottom: 0
+                right: 0
+                width: 70%
+                height: 260%
+                // background-size: 100%
+            .data
+                // position: static
+                h1
+                p
+                a
+
+@media (min-width: 1200px)
+    .nosotros
+        .nosotros-inner
+            // display: grid
+            // grid-template-columns: 1fr 1fr
+            // height: 100%
+            padding-top: 110px
+            padding-bottom: 120px
+            .img
+                // position: relative
+                left: 100px
+                top: -380px
+                bottom: 0
+                right: 0
+                width: 60%
+                height: 260%
+                // background-size: 100%
+            .data
+                // position: static
+                h1
+                p
+                a
+
+@media (min-width: 1400px)
+    .nosotros
+        .nosotros-inner
+            // display: grid
+            // grid-template-columns: 1fr 1fr
+            // height: 100%
+            padding-top: 110px
+            padding-bottom: 120px
+            .img
+                // position: relative
+                left: 160px
+                top: -320px
+                bottom: 0
+                right: 0
+                width: 45%
+                height: 290%
+                // background-size: 100%
+            .data
+                // position: static
+                h1
+                p
+                a
+
+@media (min-width: 1600px)
+    .nosotros
+        .nosotros-inner
+            // display: grid
+            // grid-template-columns: 1fr 1fr
+            // height: 100%
+            padding-top: 110px
+            padding-bottom: 120px
+            .img
+                // position: relative
+                left: 160px
+                top: -320px
+                bottom: 0
+                right: 0
+                width: 45%
+                height: 290%
+                // background-size: 100%
+            .data
+                // position: static
+                h1
+                p
+                a
+
+//  Footer
+footer.site-footer
+    background: $gunmetal
+    padding-top: 40px
+    padding-bottom: 40px
+    p
+        margin: 0
+        color: $gainsboro
+        text-align: center
+        font-size: 13px
+        line-height: 140%
+        img
+            vertical-align: middle
+            margin-right: 3px
+        a
+            @include font-bold
+            color: $gainsboro
+            text-decoration: none
+
+.block-scroll
+    overflow: hidden !important;
