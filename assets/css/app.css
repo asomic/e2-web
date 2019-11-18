@@ -520,25 +520,31 @@ header.site-header {
         height: 380px; } }
 
 @media (min-width: 900px) {
-  .servicios .servicios-inner .servicios-items {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 16px; }
-    .servicios .servicios-inner .servicios-items .item {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box; }
-      .servicios .servicios-inner .servicios-items .item:nth-child(n+2) {
-        margin-bottom: 22px; }
-      .servicios .servicios-inner .servicios-items .item .img {
-        height: 300px; } }
+  .servicios .servicios-inner {
+    padding-top: 62px;
+    padding-bottom: 42px; }
+    .servicios .servicios-inner .servicios-items {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 16px; }
+      .servicios .servicios-inner .servicios-items .item {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+        .servicios .servicios-inner .servicios-items .item:nth-child(n+2) {
+          margin-bottom: 22px; }
+        .servicios .servicios-inner .servicios-items .item .img {
+          height: 300px; } }
 
 @media (min-width: 1400px) {
-  .servicios .servicios-inner .servicios-items .item .img {
-    height: 360px; }
-  .servicios .servicios-inner .servicios-items .item h3 {
-    width: 95%; } }
+  .servicios .servicios-inner {
+    padding-top: 70px;
+    padding-bottom: 52px; }
+    .servicios .servicios-inner .servicios-items .item .img {
+      height: 360px; }
+    .servicios .servicios-inner .servicios-items .item h3 {
+      width: 95%; } }
 
 @media (min-width: 1600px) {
   .servicios .servicios-inner .servicios-items .item .img {
@@ -780,8 +786,16 @@ header.site-header {
       height: 260px; } }
 
 @media (min-width: 900px) {
-  .proyectos .proyectos-inner .proyectos-items .item .img {
-    height: 310px; } }
+  .proyectos .proyectos-inner {
+    padding-top: 62px;
+    padding-bottom: 42px; }
+    .proyectos .proyectos-inner .proyectos-items .item .img {
+      height: 310px; } }
+
+@media (min-width: 1400px) {
+  .proyectos .proyectos-inner {
+    padding-top: 70px;
+    padding-bottom: 56px; } }
 
 @media (min-width: 1600px) {
   .proyectos .proyectos-inner .proyectos-items .item .img {

@@ -8,6 +8,12 @@
     });
 
     // GoTo Links Navbar
+    $("#desktop-menu #top-trigger").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#top").offset().top
+        }, 1000);
+        return false;
+    });
     $("#desktop-menu #servicios-trigger").click(function() {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#servicios-section").offset().top
@@ -21,6 +27,47 @@
         return false;
     });
     $("#desktop-menu #nosotros-trigger").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#nosotros-section").offset().top
+        }, 1000);
+        return false;
+    });
+
+    $("#mobile-menu #m-servicios-trigger").click(function() {
+        $('.hamburger').toggleClass('is-active');
+        $('.the-menu-mobile').toggleClass('slide');
+        $('html, body').toggleClass('block-scroll');
+        $('.site-header').toggleClass('fixed')
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#servicios-section").offset().top
+        }, 1000);
+        return false;
+    });
+    $("#mobile-menu #m-top-trigger").click(function() {
+        $('.hamburger').toggleClass('is-active');
+        $('.the-menu-mobile').toggleClass('slide');
+        $('html, body').toggleClass('block-scroll');
+        $('.site-header').toggleClass('fixed')
+        // $([document.documentElement, document.body]).animate({
+        //     scrollTop: $("#servicios-section").offset().top
+        // }, 1000);
+        return false;
+    });
+    $("#mobile-menu #m-proyectos-trigger").click(function() {
+        $('.hamburger').toggleClass('is-active');
+        $('.the-menu-mobile').toggleClass('slide');
+        $('html, body').toggleClass('block-scroll');
+        $('.site-header').toggleClass('fixed')
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#proyectos-section").offset().top
+        }, 1000);
+        return false;
+    });
+    $("#mobile-menu #m-nosotros-trigger").click(function() {
+        $('.hamburger').toggleClass('is-active');
+        $('.the-menu-mobile').toggleClass('slide');
+        $('html, body').toggleClass('block-scroll');
+        $('.site-header').toggleClass('fixed')
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#nosotros-section").offset().top
         }, 1000);
