@@ -780,7 +780,7 @@ header.site-header
                 .item
                     &:last-child
                     .img
-                        height: 360px
+                        height: 370px
                     h3
                     p
                     &:before
@@ -989,13 +989,60 @@ footer.site-footer
     .goToUp
         bottom: 40px
         right: 40px
+        img
+            width: 34px
+
+@media (min-width: 1400px)
+    .goToUp
+        // bottom: 40px
+        // right: 40px
+        img
+            width: 38px
 
 @media (min-width: 1600px)
     .goToUp
         bottom: 80px
         right: 50px
+        img
+            width: 40px
 
 @media (min-width: 1900px)
     .goToUp
         bottom: 5vh
         right: 5vw
+
+// Fancy
+.fancybox-slide
+    .fancybox-content
+        // width: 800px
+        // height: 600px
+        // overflow: hidden
+        border-radius: 2px
+        padding: 22px
+        max-width: 80vw
+        max-height: 90vh
+        margin: 0
+        img
+            width: 100%
+
+@media (min-width: 1200px)
+    .fancybox-slide
+        .fancybox-content
+            max-width: 70vw
+            // max-height: 90vh
+            img
+                width: 100%
+
+@media (min-width: 1400px)
+    .fancybox-slide
+        .fancybox-content
+            max-width: 64vw
+            img
+                width: 100%
+
+@media (min-width: 1600px)
+    .fancybox-slide
+        .fancybox-content
+            max-width: 54vw
+            img
+                width: 100%
