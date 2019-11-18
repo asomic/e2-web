@@ -79,6 +79,13 @@
             "close"
         ],
     });
+
+    $(".goToUp").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#top").offset().top
+        }, 1000);
+        return false;
+    });
   
 } )( jQuery );
   

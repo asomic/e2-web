@@ -971,4 +971,31 @@ footer.site-footer
                 color: white
 
 .block-scroll
-    overflow: hidden !important;
+    overflow: hidden !important
+
+.goToUp
+    position: fixed
+    z-index: 999
+    bottom: 20px
+    right: 20px
+    cursor: pointer
+
+@media (min-width: 1024px)
+    .goToUp
+        bottom: 40px
+        right: 20px
+
+@media (min-width: 1200px)
+    .goToUp
+        bottom: 40px
+        right: 40px
+
+@media (min-width: 1600px)
+    .goToUp
+        bottom: 80px
+        right: 50px
+
+@media (min-width: 1900px)
+    .goToUp
+        bottom: 5vh
+        right: 5vw
