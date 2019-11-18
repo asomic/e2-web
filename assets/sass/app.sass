@@ -87,7 +87,11 @@ header.site-header
         align-items: center
         justify-content: space-between
         a
+            // opacity: 1
+            // transition: all ease-in-out 0.3s
             img
+            // &:hover, &:focus
+            //     opacity: 0.8
         .hamburger
             outline: none
             padding: 0
@@ -114,6 +118,24 @@ header.site-header
                     font-size: 18px
                     @include font-black
                     margin-bottom: 18px
+                    position: relative
+                    transition: all ease-in-out 0.3s
+                    &:before
+                            content: ''
+                            position: absolute
+                            width: 8px
+                            height: 8px
+                            background: transparent
+                            border-radius: 30px
+                            left: 0
+                            right: 0
+                            margin: auto
+                            bottom: -10px
+                            transition: all ease-in-out 0.3s
+                    &:hover, &:focus, &:active
+                        color: $yellow
+                        &:before
+                            background: $yellow
         nav.the-menu-mobile
             position: fixed
             z-index: -10
@@ -342,23 +364,46 @@ header.site-header
             @include font-black
         .servicios-items
             .item
+                cursor: pointer
                 margin-bottom: 46px
                 &:last-child
                     margin-bottom: 22px
+                &:hover
+                    .img
+                        .img-inner
+                            transform: scale(1.05)
+                    a.button-item
+                        color: $blue
+                        background: $yellow
                 .img
                     width: 100%
                     height: 340px
+                    margin: auto
                     margin-bottom: 22px
                     background-color: $arsenic
-                    background-position: center
-                    background-size: cover
+                    overflow: hidden
+                    box-sizing: border-box
+                    transition: all ease-in-out 0.3s
+                    position: relative
+                    .img-inner
+                        width: 105%
+                        height: 105%
+                        margin: auto
+                        background-position: center
+                        background-size: cover
+                        transition: all ease-in-out 0.5s
+                        position: absolute
+                        top: 0
+                        left: 0
+                        right: 0
+                        bottom: 0
                 h3
                     margin: 0
                     margin-bottom: 14px
                     font-size: 23px
                     line-height: 26px
                     color: $blue
-                    @include font-bold
+                    @include font-black
                 p
                     margin: 0
                     font-size: 16px
@@ -374,6 +419,9 @@ header.site-header
                     border-radius: 2px
                     line-height: 290%
                     @include font-bold
+                    transition: all ease-in-out 0.3s
+                    // &:hover, &:focus, &:active
+                        // color: $yellow
 
 @media (min-width: 768px)
     .servicios
@@ -425,6 +473,21 @@ header.site-header
                     p
                     a.button-item
 
+@media (min-width: 1600px)
+    .servicios
+        .servicios-inner
+            h2
+            .servicios-items
+                .item
+                    &:nth-child(n+2)
+                    .img
+                        height: 380px
+                    h3
+                        // width: 95%
+                    p
+                        width: 95%
+                    a.button-item
+
 // Modales
 .modals
     position: fixed
@@ -465,6 +528,7 @@ header.site-header
             overflow: scroll
             h3
                 margin: 0
+                color: $blue-dark
                 font-size: 26px
                 line-height: 120%
                 margin-bottom: 24px
@@ -486,6 +550,10 @@ header.site-header
             text-align: center
             @include font-black
             cursor: pointer
+            transition: all ease-in-out 0.3s
+            &:hover, &:focus
+                background: $yellow
+                color: $blue
 
 @media (min-width: 768px)
     .modals
@@ -505,17 +573,19 @@ header.site-header
         .modal-item
             width: 70%
             height: 65%
-            display: flex
+            // display: flex
             .img
                 width: 40%
                 height: 100%
             .data
                 width: 60%
                 height: 100%
-                padding: 48px 50px
+                padding: 52px 50px
                 h3
                 p
             .modal-button
+                width: 60%
+                right: 0
                 padding: 14px 0
 
 @media (min-width: 1200px)
@@ -587,6 +657,16 @@ header.site-header
             .item
                 position: relative
                 margin-bottom: 36px
+                cursor: pointer
+                &:hover, &:focus
+                    .img
+                        .img-inner
+                            transform: scale(1.05)
+                        .img-inner-icon
+                            .square
+                                fill: $yellow
+                            .lines
+                                fill: $blue
                 &:last-child
                     margin-bottom: 18px
                 .img
@@ -594,8 +674,25 @@ header.site-header
                     height: 220px
                     margin-bottom: 22px
                     background-color: $arsenic
-                    background-position: center
-                    background-size: cover
+                    overflow: hidden
+                    position: relative
+                    .img-inner-icon
+                        position: absolute
+                        top: 10px
+                        right: 10px
+                        z-index: 999
+                        .square
+                            fill: $blue
+                            transition: all ease-in-out 0.3s
+                        .lines
+                            fill: white
+                            transition: all ease-in-out 0.3s
+                    .img-inner
+                        width: 100%
+                        height: 100%
+                        background-position: center
+                        background-size: cover
+                        transition: all ease-in-out 0.5s
                 h3
                     margin: 0
                     font-size: 23px
@@ -607,19 +704,8 @@ header.site-header
                     @include font-light
                     font-size: 16px
                     line-height: 140%
-                &:before
-                    content: ''
-                    position: absolute
-                    top: 10px
-                    right: 10px
-                    color: white
-                    width: 28px
-                    height: 28px
-                    background-color: $blue
-                    background-image: url('/assets/images/expand-icon.svg')
-                    background-position: center
-                    background-repeat: no-repeat
-                    background-size: 60% 60%
+                .fancy-images
+                    display: none
 
 @media (min-width: 768px)
     .proyectos
@@ -668,6 +754,37 @@ header.site-header
                     p
                     &:before
 
+@media (min-width: 1400px)
+    .proyectos
+        .proyectos-inner
+            h2
+            .proyectos-items
+                // display: grid
+                // grid-template-columns: 1fr 1fr
+                // grid-gap: 20px
+                .item
+                    &:last-child
+                    .img
+                    h3
+                    p
+                    &:before
+
+@media (min-width: 1600px)
+    .proyectos
+        .proyectos-inner
+            h2
+            .proyectos-items
+                // display: grid
+                // grid-template-columns: 1fr 1fr
+                // grid-gap: 20px
+                .item
+                    &:last-child
+                    .img
+                        height: 360px
+                    h3
+                    p
+                    &:before
+
 // Nosotros
 .nosotros
     background: $arsenic
@@ -707,6 +824,12 @@ header.site-header
                 font-size: 22px
                 line-height: 26px
                 @include font-bold
+                text-decoration: none
+                border-bottom: solid 2px $yellow
+                transition: all ease-in-out 0.3s
+                &:hover, &:focus
+                    color: $gainsboro
+                    border-bottom: solid 2px transparent
 
 @media (min-width: 768px)
     .nosotros
@@ -770,6 +893,7 @@ header.site-header
                 height: 260%
                 // background-size: 100%
             .data
+                width: 90%
                 // position: static
                 h1
                 p
@@ -804,8 +928,8 @@ header.site-header
             // display: grid
             // grid-template-columns: 1fr 1fr
             // height: 100%
-            padding-top: 110px
-            padding-bottom: 120px
+            padding-top: 120px
+            padding-bottom: 130px
             .img
                 // position: relative
                 left: 160px
@@ -813,10 +937,11 @@ header.site-header
                 bottom: 0
                 right: 0
                 width: 45%
-                height: 290%
+                height: 260%
                 // background-size: 100%
             .data
                 // position: static
+                width: 80%
                 h1
                 p
                 a
@@ -832,6 +957,8 @@ footer.site-footer
         text-align: center
         font-size: 13px
         line-height: 140%
+        opacity: 0.5
+        @include font-light
         img
             vertical-align: middle
             margin-right: 3px
@@ -839,6 +966,9 @@ footer.site-footer
             @include font-bold
             color: $gainsboro
             text-decoration: none
+            transition: all ease-in-out 0.3s
+            &:focus, &:hover
+                color: white
 
 .block-scroll
     overflow: hidden !important;
