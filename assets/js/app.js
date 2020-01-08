@@ -74,6 +74,14 @@
         return false;
     });
 
+
+    // Hero Cambio imágenes
+    // $(document).ready(function(){
+    //     setTimeout(function(){
+    //         $('.hero').addClass('h-img-1');
+    //     }, 3000);
+    // });
+
     // Modales Servicios
     $('#serv-1').click(function(){
         $('.modals').toggleClass('add-visibility');
