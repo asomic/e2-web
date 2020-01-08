@@ -369,10 +369,10 @@ header.site-header {
   padding-top: 180px;
   padding-bottom: 54px;
   position: relative;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(11, 34, 140, 0.35)), to(rgba(11, 34, 140, 0.35))), url(/assets/images/back-hero.jpg) center, #3A3A41;
-  background: -webkit-linear-gradient(bottom, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/back-hero.jpg) center, #3A3A41;
-  background: -o-linear-gradient(bottom, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/back-hero.jpg) center, #3A3A41;
-  background: linear-gradient(0deg, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/back-hero.jpg) center, #3A3A41;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(11, 34, 140, 0.35)), to(rgba(11, 34, 140, 0.35))), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
+  background: -webkit-linear-gradient(bottom, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
+  background: -o-linear-gradient(bottom, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
+  background: linear-gradient(0deg, rgba(11, 34, 140, 0.35), rgba(11, 34, 140, 0.35)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
   background-size: cover; }
   .hero .hero-inner h1 {
     margin: 0;
@@ -410,10 +410,10 @@ header.site-header {
   .hero {
     padding-top: 210px;
     padding-bottom: 64px;
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(11, 34, 140, 0.3)), to(rgba(11, 34, 140, 0.3))), url(/assets/images/back-hero.jpg) center, #3A3A41;
-    background: -webkit-linear-gradient(bottom, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/back-hero.jpg) center, #3A3A41;
-    background: -o-linear-gradient(bottom, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/back-hero.jpg) center, #3A3A41;
-    background: linear-gradient(0deg, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/back-hero.jpg) center, #3A3A41;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(11, 34, 140, 0.3)), to(rgba(11, 34, 140, 0.3))), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
+    background: -webkit-linear-gradient(bottom, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
+    background: -o-linear-gradient(bottom, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
+    background: linear-gradient(0deg, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
     background-size: cover; }
     .hero .hero-inner h1 {
       width: 55%;
