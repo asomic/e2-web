@@ -74,13 +74,66 @@
         return false;
     });
 
+    easy_background(".hero", 
+        {
+            slide: [
+                "assets/images/servicios/perforacion/perforacion_1.jpg",
+                "assets/images/servicios/cargio/cargio_2.jpg"
+            ],
 
-    // Hero Cambio imágenes
-    // $(document).ready(function(){
-    //     setTimeout(function(){
-    //         $('.hero').addClass('h-img-1');
-    //     }, 3000);
-    // });
+            delay: [
+                4000, 4000
+            ]
+        }
+    );
+
+    easy_background(".serv-1 .img", 
+        {
+            slide: [
+                "assets/images/servicios/cargio/cargio_3.jpg"
+            ],
+
+            delay: [
+                3000
+            ]
+        }
+    );
+
+    easy_background(".serv-2 .img", 
+        {
+            slide: [
+                "assets/images/servicios/admin_polvorines/ad_polvorines_1.jpg"
+            ],
+
+            delay: [
+                3000
+            ]
+        }
+    );
+
+    easy_background(".serv-3 .img", 
+        {
+            slide: [
+                "assets/images/servicios/perforacion/perforacion_2.jpg"
+            ],
+
+            delay: [
+                3000
+            ]
+        }
+    );
+
+    easy_background(".serv-4 .img", 
+        {
+            slide: [
+                "assets/images/servicios/camion_fabrica/camion_fabrica_1.jpg"
+            ],
+
+            delay: [
+                3000
+            ]
+        }
+    );
 
     // Modales Servicios
     $('#serv-1').click(function(){
@@ -125,6 +178,28 @@
     });
 
     $('[data-fancybox="gallery-2"]').fancybox({
+        // Options will go here
+        arrows: true,
+         buttons: [
+            "zoom",
+            "slideShow",
+            "thumbs",
+            "close"
+        ],
+    });
+
+    $('[data-fancybox="gallery-3"]').fancybox({
+        // Options will go here
+        arrows: true,
+         buttons: [
+            "zoom",
+            "slideShow",
+            "thumbs",
+            "close"
+        ],
+    });
+
+    $('[data-fancybox="gallery-4"]').fancybox({
         // Options will go here
         arrows: true,
          buttons: [
