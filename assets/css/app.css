@@ -440,9 +440,13 @@ header.site-header {
       margin-bottom: 100px;
       line-height: 120%; } }
 
+@media (min-width: 1400px) {
+  .hero {
+    padding-top: 224px; } }
+
 @media (min-width: 1600px) {
   .hero {
-    padding-top: 220px; }
+    padding-top: 230px; }
     .hero .hero-inner h1 {
       width: 50%;
       margin-bottom: 120px; } }

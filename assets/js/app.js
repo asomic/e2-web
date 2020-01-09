@@ -90,11 +90,13 @@
     easy_background(".serv-1 .img", 
         {
             slide: [
+                "assets/images/servicios/cargio/cargio_1.jpg",
+                "assets/images/servicios/cargio/cargio_2.jpg",
                 "assets/images/servicios/cargio/cargio_3.jpg"
             ],
 
             delay: [
-                3000
+                3000, 3000, 3000
             ]
         }
     );
@@ -102,11 +104,14 @@
     easy_background(".serv-2 .img", 
         {
             slide: [
-                "assets/images/servicios/admin_polvorines/ad_polvorines_1.jpg"
+                "assets/images/servicios/admin_polvorines/ad_polvorines_1.jpg",
+                "assets/images/servicios/admin_polvorines/ad_polvorines_2.jpg",
+                "assets/images/servicios/admin_polvorines/ad_polvorines_3.jpg",
+                "assets/images/servicios/admin_polvorines/ad_polvorines_4.jpg"
             ],
 
             delay: [
-                3000
+                3000, 3000, 3000, 3000
             ]
         }
     );
@@ -114,11 +119,14 @@
     easy_background(".serv-3 .img", 
         {
             slide: [
-                "assets/images/servicios/perforacion/perforacion_2.jpg"
+                "assets/images/servicios/perforacion/perforacion_1.jpg",
+                "assets/images/servicios/perforacion/perforacion_2.jpg",
+                "assets/images/servicios/perforacion/perforacion_3.jpg",
+                "assets/images/servicios/perforacion/perforacion_4.jpg"
             ],
 
             delay: [
-                3000
+                3000, 3000, 3000, 3000
             ]
         }
     );
@@ -126,7 +134,9 @@
     easy_background(".serv-4 .img", 
         {
             slide: [
-                "assets/images/servicios/camion_fabrica/camion_fabrica_1.jpg"
+                "assets/images/servicios/camion_fabrica/camion_fabrica_1.jpg",
+                "assets/images/servicios/camion_fabrica/camion_fabrica_2.jpg",
+                "assets/images/servicios/camion_fabrica/camion_fabrica_3.jpg"
             ],
 
             delay: [
