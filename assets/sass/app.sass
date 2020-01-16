@@ -307,7 +307,7 @@ header.site-header
         position: relative
         h1
             margin: 0
-            font-size: 38px
+            font-size: 34px
             line-height: 115%
             color: white
             margin-bottom: 86px
@@ -328,6 +328,7 @@ header.site-header
         padding-bottom: 56px
         .hero-inner
             h1
+                font-size: 38px
                 width: 80%
                 margin-bottom: 90px
             .hero-footer
@@ -341,8 +342,6 @@ header.site-header
     .hero
         padding-top: 210px
         padding-bottom: 64px
-        // background: linear-gradient(0deg, rgba(11, 34, 140, 0.3), rgba(11, 34, 140, 0.3)), url(/assets/images/servicios/perforacion/perforacion_1.jpg) center, #3A3A41;
-        // background-size: cover
         .hero-inner
             h1
                 width: 55%
@@ -889,7 +888,7 @@ header.site-header
                 color: $gainsboro
                 font-size: 16px
                 line-height: 140%
-                margin-bottom: 35px
+                // margin-bottom: 35px
             ul
                 padding-left: 18px
                 li
@@ -1030,20 +1029,29 @@ footer.site-footer
         margin: 0
         color: $gainsboro
         text-align: center
-        font-size: 13px
+        font-size: 14px
         line-height: 140%
-        opacity: 0.5
+        // opacity: 0.8
         @include font-light
         img
             vertical-align: middle
             margin-right: 3px
         a
             @include font-bold
-            color: $gainsboro
+            color: $yellow
             text-decoration: none
             transition: all ease-in-out 0.3s
             &:focus, &:hover
                 color: white
+    p.credits
+        color: $gainsboro
+        opacity: 0.7
+        a
+            color: $gainsboro
+
+@media (min-width: 900px)
+    footer.site-footer
+        padding-top: 50px
 
 .block-scroll
     overflow: hidden !important
