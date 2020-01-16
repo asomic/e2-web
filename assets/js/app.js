@@ -77,8 +77,8 @@
     easy_background(".hero", 
         {
             slide: [
-                "assets/images/servicios/perforacion/perforacion_1.jpg",
-                "assets/images/servicios/cargio/cargio_2.jpg"
+                "assets/images/slider/slider_1.jpg",
+                "assets/images/slider/slider_2.jpg"
             ],
 
             delay: [
@@ -106,8 +106,7 @@
             slide: [
                 "assets/images/servicios/admin_polvorines/ad_polvorines_1.jpg",
                 "assets/images/servicios/admin_polvorines/ad_polvorines_2.jpg",
-                "assets/images/servicios/admin_polvorines/ad_polvorines_3.jpg",
-                "assets/images/servicios/admin_polvorines/ad_polvorines_4.jpg"
+
             ],
 
             delay: [
